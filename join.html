@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join our family — Chore Champs: Earn & Save</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:480px;margin:0 auto;
+    padding:32px 20px;color:#2D3436;line-height:1.65;text-align:center}
+  h1{color:#6C5CE7}
+  .code{font-size:30px;font-weight:800;letter-spacing:4px;background:#F3F1FF;
+    border-radius:14px;padding:14px 10px;margin:18px 0;color:#2D3436}
+  .btn{display:block;background:#6C5CE7;color:#fff;text-decoration:none;font-weight:700;
+    border-radius:14px;padding:15px 10px;margin:12px 0}
+  .btn.alt{background:#00B894}
+  .muted{color:#8B8B9E;font-size:14px}
+  .qr{margin:18px auto 6px}
+  a{color:#6C5CE7}
+</style>
+</head>
+<body>
+<h1>🏆 Chore Champs</h1>
+<p>You've been invited to join a family!</p>
+
+<div class="code" id="code">— — — — — —</div>
+
+<a class="btn" id="openApp" href="#">📱 I have the app — open it</a>
+<a class="btn alt" id="store"
+   href="https://apps.apple.com/app/id0000000000">⬇️ Get the app on the App Store</a>
+
+<p class="muted">After installing: open the app → <b>"We have a family code — join"</b> →
+scan the QR below or type the code above → tap <b>"I'm a parent"</b> and enter the family PIN
+(kids just tap their name).</p>
+
+<img class="qr" id="qr" alt="Family QR code" width="180" height="180">
+<p class="muted">Scan this QR from inside the app's join screen.</p>
+
+<script>
+  var code = (new URLSearchParams(location.search).get("code") || "").toUpperCase()
+    .replace(/[^A-Z0-9-]/g, "");
+  if (code) {
+    document.getElementById("code").textContent = code;
+    document.getElementById("openApp").href = "chorechamps://join?code=" + code;
+    // QR encodes this page's own URL, so the in-app scanner (which understands
+    // invite URLs) and a fresh phone's camera both do the right thing.
+    document.getElementById("qr").src =
+      "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+      encodeURIComponent(location.origin + location.pathname + "?code=" + code);
+  } else {
+    document.getElementById("code").textContent = "Ask for an invite link";
+    document.getElementById("openApp").style.display = "none";
+    document.getElementById("qr").style.display = "none";
+  }
+</script>
+</body>
+</html>
