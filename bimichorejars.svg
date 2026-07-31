@@ -1,0 +1,181 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <title>Rewards Jars</title>
+  
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6754E8"/>
+      <stop offset="100%" stop-color="#4B3BDB"/>
+    </linearGradient>
+
+    <!-- Glass Gradients -->
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="15%" stop-color="#8baaff" stop-opacity="0.1"/>
+      <stop offset="85%" stop-color="#8baaff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#8baaff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Lid Gradients -->
+    <linearGradient id="goldLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="70%" stop-color="#FFCA28"/>
+      <stop offset="100%" stop-color="#FFA000"/>
+    </linearGradient>
+    <linearGradient id="pinkLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF93A3"/>
+      <stop offset="70%" stop-color="#FF6B81"/>
+      <stop offset="100%" stop-color="#D63031"/>
+    </linearGradient>
+    <linearGradient id="tealLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#48E5E5"/>
+      <stop offset="70%" stop-color="#12CBCB"/>
+      <stop offset="100%" stop-color="#00838F"/>
+    </linearGradient>
+
+    <!-- Item Gradients -->
+    <linearGradient id="goldBag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFEA70"/>
+      <stop offset="50%" stop-color="#FFC107"/>
+      <stop offset="100%" stop-color="#F57C00"/>
+    </linearGradient>
+    <linearGradient id="goldCoin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="40%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#F57C00"/>
+    </linearGradient>
+    <linearGradient id="redPink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF93A3"/>
+      <stop offset="40%" stop-color="#FF4757"/>
+      <stop offset="100%" stop-color="#C0392B"/>
+    </linearGradient>
+    <linearGradient id="starGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bg)"/>
+
+  <!-- Shadows -->
+  <ellipse cx="205" cy="675" rx="90" ry="12" fill="#2d22a3" opacity="0.6"/>
+  <ellipse cx="595" cy="675" rx="90" ry="12" fill="#2d22a3" opacity="0.6"/>
+  <ellipse cx="400" cy="700" rx="110" ry="16" fill="#201582" opacity="0.8"/>
+
+  <!-- ==================== LEFT JAR (Yellow/Bag) ==================== -->
+  <g id="left-jar">
+    <!-- Bag Object -->
+    <g transform="translate(205, 540)">
+      <path d="M-20,-45 C-20,-45 -10,-20 0,-20 C10,-20 20,-45 20,-45 Z" fill="url(#goldBag)" stroke="#D88A00" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M0,-20 C-50,-20 -60,40 -50,70 C-40,95 40,95 50,70 C60,40 50,-20 0,-20 Z" fill="url(#goldBag)" stroke="#D88A00" stroke-width="3"/>
+      <rect x="-15" y="-25" width="30" height="8" rx="4" fill="#D88A00"/>
+      <!-- Bag Highlight -->
+      <path d="M -30 45 Q -30 15 -10 -5" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+      <circle cx="-25" cy="15" r="4" fill="#FFF" opacity="0.7"/>
+    </g>
+
+    <!-- Glass Interior Opening -->
+    <ellipse cx="205" cy="415" rx="55" ry="8" fill="#5c7de0" opacity="0.3"/>
+    
+    <!-- Glass Body -->
+    <path d="M 145 435 C 115 435, 110 460, 110 490 L 110 610 C 110 650, 130 670, 170 670 L 240 670 C 280 670, 300 650, 300 610 L 300 490 C 300 460, 295 435, 265 435 Z" fill="url(#glass)" stroke="url(#glassEdge)" stroke-width="6"/>
+    <ellipse cx="205" cy="650" rx="80" ry="12" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.4"/>
+    <path d="M 120 645 C 130 660, 150 660, 170 660 L 240 660 C 260 660, 280 660, 290 645" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+    
+    <!-- Neck -->
+    <rect x="145" y="415" width="120" height="25" fill="url(#glass)" stroke="url(#glassEdge)" stroke-width="4"/>
+    
+    <!-- Lid -->
+    <rect x="125" y="395" width="160" height="20" rx="6" fill="#D89A00"/>
+    <rect x="125" y="365" width="160" height="40" rx="12" fill="url(#goldLid)"/>
+    <rect x="135" y="372" width="140" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
+    
+    <!-- Outer Glass Highlights -->
+    <path d="M 125 490 L 125 610" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 285 490 L 285 610" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- ==================== RIGHT JAR (Pink/Heart) ==================== -->
+  <g id="right-jar">
+    <!-- Heart Object -->
+    <g transform="translate(595, 510)">
+      <path d="M0,15 C0,15 -20,-10 -40,-10 C-65,-10 -75,25 -45,55 L0,95 L45,55 C75,25 65,-10 40,-10 C20,-10 0,15 0,15 Z" fill="url(#redPink)" stroke="#A93226" stroke-width="3" stroke-linejoin="round"/>
+      <!-- Heart Highlight -->
+      <path d="M -25 5 Q -10 -5 0 10" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+      <circle cx="-30" cy="15" r="4" fill="#FFF" opacity="0.7"/>
+    </g>
+
+    <!-- Glass Interior Opening -->
+    <ellipse cx="595" cy="415" rx="55" ry="8" fill="#5c7de0" opacity="0.3"/>
+    
+    <!-- Glass Body -->
+    <path d="M 535 435 C 505 435, 500 460, 500 490 L 500 610 C 500 650, 520 670, 560 670 L 630 670 C 670 670, 690 650, 690 610 L 690 490 C 690 460, 685 435, 655 435 Z" fill="url(#glass)" stroke="url(#glassEdge)" stroke-width="6"/>
+    <ellipse cx="595" cy="650" rx="80" ry="12" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.4"/>
+    <path d="M 510 645 C 520 660, 540 660, 560 660 L 630 660 C 650 660, 670 660, 680 645" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+    
+    <!-- Neck -->
+    <rect x="535" y="415" width="120" height="25" fill="url(#glass)" stroke="url(#glassEdge)" stroke-width="4"/>
+    
+    <!-- Lid -->
+    <rect x="515" y="395" width="160" height="20" rx="6" fill="#B92938"/>
+    <rect x="515" y="365" width="160" height="40" rx="12" fill="url(#pinkLid)"/>
+    <rect x="525" y="372" width="140" height="6" rx="3" fill="#ffffff" opacity="0.4"/>
+    
+    <!-- Outer Glass Highlights -->
+    <path d="M 515 490 L 515 610" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 675 490 L 675 610" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- ==================== MIDDLE JAR (Teal/Coin/Tall) ==================== -->
+  <g id="middle-jar">
+    <!-- Coin Object -->
+    <g transform="translate(400, 540)">
+      <circle cx="0" cy="0" r="75" fill="url(#goldCoin)" stroke="#D88A00" stroke-width="4"/>
+      <circle cx="0" cy="0" r="50" fill="url(#goldCoin)" stroke="#D88A00" stroke-width="4"/>
+      <!-- Coin Highlight -->
+      <path d="M -35 -35 A 50 50 0 0 1 35 -35" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+      <circle cx="-25" cy="-25" r="5" fill="#FFF" opacity="0.7"/>
+    </g>
+
+    <!-- Glass Interior Opening -->
+    <ellipse cx="400" cy="345" rx="65" ry="10" fill="#5c7de0" opacity="0.3"/>
+    
+    <!-- Glass Body -->
+    <path d="M 330 365 C 290 365, 280 395, 280 435 L 280 625 C 280 675, 310 695, 350 695 L 450 695 C 490 695, 520 675, 520 625 L 520 435 C 520 395, 510 365, 470 365 Z" fill="url(#glass)" stroke="url(#glassEdge)" stroke-width="8"/>
+    <ellipse cx="400" cy="670" rx="100" ry="15" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.4"/>
+    <path d="M 295 665 C 310 685, 330 685, 350 685 L 450 685 C 470 685, 490 685, 505 665" fill="none" stroke="#ffffff" stroke-width="10" opacity="0.6" stroke-linecap="round"/>
+    
+    <!-- Neck -->
+    <rect x="330" y="345" width="140" height="25" fill="url(#glass)" stroke="url(#glassEdge)" stroke-width="4"/>
+    
+    <!-- Lid -->
+    <rect x="310" y="315" width="180" height="25" rx="6" fill="#007985"/>
+    <rect x="310" y="280" width="180" height="45" rx="12" fill="url(#tealLid)"/>
+    <rect x="325" y="288" width="150" height="8" rx="4" fill="#ffffff" opacity="0.5"/>
+    
+    <!-- Outer Glass Highlights -->
+    <path d="M 295 440 L 295 615" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 505 440 L 505 615" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- ==================== STAR & SPARKS ==================== -->
+  <g id="star-burst">
+    <!-- Radiating Sparks -->
+    <line x1="335" y1="210" x2="310" y2="235" stroke="#FFD54F" stroke-width="12" stroke-linecap="round"/>
+    <line x1="315" y1="165" x2="280" y2="175" stroke="#FFD54F" stroke-width="12" stroke-linecap="round"/>
+    <line x1="465" y1="210" x2="490" y2="235" stroke="#FFD54F" stroke-width="12" stroke-linecap="round"/>
+    <line x1="485" y1="165" x2="520" y2="175" stroke="#FFD54F" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Main Star -->
+    <path d="M400,105 L415,145 L455,145 L422,168 L435,210 L400,185 L365,210 L378,168 L345,145 L385,145 Z" fill="url(#starGold)" stroke="#D88A00" stroke-width="4" stroke-linejoin="round"/>
+    <!-- Star Highlight -->
+    <path d="M 400 115 L 410 148 L 440 148" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+</svg>
