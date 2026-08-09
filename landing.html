@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chore Jars — Chores, allowance & saving for families</title>
+<meta name="description" content="Chore Jars turns everyday chores into real money lessons. Kids earn, save, and share — parents stay in control. No ads, no tracking, no accounts for kids.">
+<style>
+  :root{ --purple:#6C5CE7; --purple2:#a29bfe; --green:#00B894; --ink:#2D3436; --muted:#6b6b7d; --bg:#F7F5FF; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:var(--purple);text-decoration:none}
+  .btn{display:inline-block;background:var(--purple);color:#fff;font-weight:800;padding:14px 26px;border-radius:14px;font-size:16px;transition:transform .12s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:#fff;color:var(--purple);border:2px solid #E6E2FF}
+
+  /* nav */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;max-width:1080px;margin:0 auto}
+  
+
+h1 {
+  margin: 0 0 0 12px;    /* Removes top/bottom margins and adds space on the left */
+}
+  /* hero */
+  .hero{background:linear-gradient(160deg,#6C5CE7,#a29bfe);color:#fff;padding:60px 0 90px;border-radius:0 0 40px 40px}
+  .hero .wrap{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+  .hero-txt{flex:1;min-width:300px}
+  .hero h1{font-size:44px;font-weight:900;line-height:1.1;margin-bottom:16px}
+  .hero p{font-size:19px;opacity:.95;margin-bottom:26px;max-width:520px}
+  .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .btn{background:#fff;color:var(--purple)}
+  .hero .btn.ghost{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.5)}
+  .trust{margin-top:22px;font-size:14px;opacity:.9}
+  .phone-hero{width:250px;height:520px;background:#F3F1FF;border-radius:34px;box-shadow:0 20px 50px rgba(0,0,0,.3);
+    border:8px solid #2d2d44;overflow:hidden;flex-shrink:0;margin:0 auto}
+  .ph-head{background:var(--purple);color:#fff;padding:20px 16px}
+  .ph-head .t{font-weight:800;font-size:16px}
+  .ph-head .s{font-size:11px;opacity:.85}
+  .balcard{background:linear-gradient(135deg,#00B894,#55EFC4);margin:14px;border-radius:18px;padding:18px;text-align:center;color:#fff}
+  .balcard .amt{font-size:34px;font-weight:900}
+  .balcard .lbl{font-size:10px;letter-spacing:1px;text-transform:uppercase;opacity:.9;font-weight:700}
+  .jars{display:flex;gap:8px;margin:0 14px}
+  .jars .j{flex:1;border-radius:14px;padding:12px 6px;text-align:center;color:#fff}
+  .jars .je{font-size:22px}.jars .jl{font-size:10px;font-weight:700}.jars .jv{font-size:13px;font-weight:900}
+
+  /* sections */
+  section{padding:64px 0}
+  h2{font-size:32px;font-weight:900;text-align:center;margin-bottom:10px}
+  .lead{text-align:center;color:var(--muted);font-size:17px;max-width:620px;margin:0 auto 44px}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .feat{background:var(--bg);border-radius:20px;padding:26px}
+  .feat .ic{font-size:34px;margin-bottom:10px}
+  .feat h3{font-size:18px;font-weight:800;margin-bottom:6px}
+  .feat p{color:var(--muted);font-size:15px}
+
+  .jarsec{background:var(--bg);border-radius:32px;margin:0 22px;padding:56px 22px}
+  .jarsec .wrap{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+  .jarsec .col{flex:1;min-width:280px}
+  .jarsec h2{text-align:left}
+  .jarsec .lead{text-align:left;margin:0 0 20px}
+  .jarline{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border-radius:16px;padding:14px 18px}
+  .jarline .big{font-size:28px}
+  .jarline b{display:block;font-size:16px}
+  .jarline span{color:var(--muted);font-size:14px}
+
+  .privacy{background:#2D3436;color:#fff;border-radius:32px;margin:0 22px;padding:52px 30px;text-align:center}
+  .privacy h2{color:#fff}
+  .privacy .lead{color:rgba(255,255,255,.8)}
+  .pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+  .pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:10px 20px;font-weight:700;font-size:15px}
+
+  .final{text-align:center;padding:70px 22px}
+  .final h2{margin-bottom:14px}
+  .logo-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the span and h1 perfectly */
+    gap: 12px;           /* Adds clean spacing between the logo and text */
+  }
+  .logo{font-size:20px;font-weight:900;color:var(--ink)}
+  .logo {
+  display: inline-block; 
+  vertical-align: middle; /* Aligns them along their central axes */
+}
+.logo-container h1 {
+  display: inline-block;
+  color:#6C5CE7; 
+  vertical-align: middle; /* Aligns them along their central axes */
+}
+  footer{background:var(--bg);padding:30px 22px;text-align:center;color:var(--muted);font-size:14px}
+  footer a{margin:0 8px}
+  @media(max-width:720px){.hero h1{font-size:34px}h2{font-size:26px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-container"><span class="logo"><img src="images/adaptive-icon.png" width="45px"></span> <h1>Chore Jars</h1></div>
+  <a class="btn ghost" href="#get">Get the app</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <h1>Chores today.<br>Money skills for life.</h1>
+      <p>Chore Jars turns everyday chores into real money lessons — kids earn, save, and share, while you stay in control from your own phone.</p>
+      <div class="cta-row">
+        <a class="btn" href="#get">Download free</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <div class="trust">✔ No ads &nbsp; ✔ No tracking &nbsp; ✔ No accounts for kids</div>
+    </div>
+    <div class="phone-hero">
+      <div class="ph-head"><div class="t">🦄 Mia</div><div class="s">Go Mia! 🌟</div></div>
+      <div class="balcard"><div class="lbl">My Money</div><div class="amt">$8.50</div></div>
+      <div class="jars">
+        <div class="j" style="background:#00B894"><div class="je">🟢</div><div class="jl">Spend</div><div class="jv">$4.25</div></div>
+        <div class="j" style="background:#0984e3"><div class="je">🔵</div><div class="jl">Save</div><div class="jv">$3.40</div></div>
+        <div class="j" style="background:#a29bfe"><div class="je">🟣</div><div class="jl">Share</div><div class="jv">$0.85</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap">
+    <h2>Simple for kids. Reassuring for parents.</h2>
+    <p class="lead">Set up your family in under two minutes. Kids join by scanning a QR code — no emails, no accounts.</p>
+    <div class="features">
+      <div class="feat"><div class="ic">🧹</div><h3>Chores that fit real life</h3><p>Repeat any days, weekends only, or as a one-time task. Kids check them off on their own device.</p></div>
+      <div class="feat"><div class="ic">🫙</div><h3>Spend, Save &amp; Share jars</h3><p>Every child's money splits automatically, so saving becomes a habit from day one.</p></div>
+      <div class="feat"><div class="ic">🎯</div><h3>Savings goals</h3><p>Kids set a goal and watch the progress bar fill — the motivation that actually sticks.</p></div>
+      <div class="feat"><div class="ic">✅</div><h3>Parent approval</h3><p>Chores wait for your OK before they pay out, so you always stay in control.</p></div>
+      <div class="feat"><div class="ic">🔥</div><h3>Streaks &amp; badges</h3><p>Fun rewards keep kids coming back and turn chores into a routine they're proud of.</p></div>
+      <div class="feat"><div class="ic">👨‍👩‍👧</div><h3>Two parents, in sync</h3><p>Both parents share one family and stay updated live across devices.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="jarsec">
+  <div class="wrap">
+    <div class="col">
+      <h2>Teach saving, not just earning</h2>
+      <p class="lead">Most allowance apps stop at "earn." Chore Jars helps kids build the habit that matters — setting money aside before they spend it.</p>
+      <a class="btn" href="#get">Start free</a>
+    </div>
+    <div class="col">
+      <div class="jarline"><span class="big">🟢</span><div><b>Spend</b><span>For the things they want now</span></div></div>
+      <div class="jarline"><span class="big">🔵</span><div><b>Save</b><span>Toward a goal worth waiting for</span></div></div>
+      <div class="jarline"><span class="big">🟣</span><div><b>Share</b><span>Giving to others they care about</span></div></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="privacy">
+    <h2>Your family's data stays yours</h2>
+    <p class="lead">We built Chore Jars the way we'd want an app for our own kids: private, calm, and honest.</p>
+    <div class="pills">
+      <div class="pill">🚫 No ads</div>
+      <div class="pill">🕵️ No tracking</div>
+      <div class="pill">📧 No kid accounts</div>
+      <div class="pill">💸 No selling data</div>
+    </div>
+  </div>
+</section>
+
+<section id="get" class="final">
+  <h2>Ready to end the chore chart chaos?</h2>
+  <p class="lead">Free to download. Works in 8 languages and 30+ currencies.</p>
+  <a class="btn" href="#">Download on the App Store</a>
+  <p style="margin-top:14px;color:var(--muted);font-size:14px">Replace this link with your live App Store URL.</p>
+</section>
+
+<footer>
+  🏆 Chore Jars · Made by VACE Company Limited
+  <div style="margin-top:8px">
+    <a href="index.html">Support</a> ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="mailto:vannguyen0505@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
